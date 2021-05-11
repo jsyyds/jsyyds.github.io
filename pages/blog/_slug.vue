@@ -1,6 +1,6 @@
 <template>
   <article
-    class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
+    class="article flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
   >
     <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
       <img
@@ -11,14 +11,15 @@
       <div class="overlay"></div>
       <div class="absolute top-32 left-32 text-white">
         <NuxtLink to="/"><Logo /></NuxtLink>
-        <div class="mt-16 -mb-3 flex uppercase text-sm">
-          <p class="mr-3">
+        <div class="mt-16 -mb-2 flex uppercase text-sm">
+          <!-- <p class="mr-3"> -->
+          <p>
             {{ formatDate(article.updatedAt) }}
           </p>
           <!-- <span class="mr-3">•</span>
           <p>{{ article.author.name }}</p> -->
         </div>
-        <h1 class="text-6xl font-bold">{{ article.title }}</h1>
+        <h1 class="text-6xl font-bold mb-2">{{ article.title }}</h1>
         <span v-for="(tag, id) in article.tags" :key="id">
           <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
             <span
@@ -44,7 +45,7 @@
     >
       <h1 class="font-bold text-4xl">{{ article.title }}</h1>
       <p>{{ article.description }}</p>
-      <p class="pb-4">Post last updated: {{ formatDate(article.updatedAt) }}</p>
+      <p class="pb-4">文章最后更新于：{{ formatDate(article.updatedAt) }}</p>
       <!-- table of contents -->
       <nav class="pb-6">
         <ul>
@@ -105,23 +106,25 @@ export default {
   }
 }
 </script>
-<style>
-.nuxt-content p {
-  margin-bottom: 20px;
-}
-.nuxt-content h2 {
-  font-weight: bold;
-  font-size: 28px;
-}
-.nuxt-content h3 {
-  font-weight: bold;
-  font-size: 22px;
-}
-.icon.icon-link {
-  background-image: url('~assets/svg/icon-hashtag.svg');
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
+<style lang="scss" scoped>
+::v-deep .nuxt-content {
+  p {
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .icon.icon-link {
+    background-image: url('~assets/svg/icon-hashtag.svg');
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+  }
 }
 </style>
