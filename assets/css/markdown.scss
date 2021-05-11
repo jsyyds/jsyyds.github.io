@@ -1,0 +1,158 @@
+:root {
+    --side-bar-bg-color: #efefef;
+    --control-text-color: #777;
+    --primary-color: #393894;
+    --primary-btn-border-color: #393894;
+    --active-file-bg-color: #eaeaea;
+    --active-file-text-color: inherit;
+    --active-file-border-color: #393894;
+    --item-hover-text-color: #393894;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .925rem;
+}
+
+body {
+    background: none;
+    color: #2e2e2e;
+    line-height: 1.6;
+    height: 100%;
+}
+
+code .comment{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+tt {
+    border-radius: 3px;
+    color: #b9bcba;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+h1 tt {
+    font-size: inherit;
+}
+
+h2 tt {
+    font-size: inherit;
+}
+
+h3 tt {
+    font-size: inherit;
+}
+
+h4 tt {
+    font-size: inherit;
+}
+
+h5 tt {
+    font-size: inherit;
+}
+
+h6 tt {
+    font-size: inherit;
+}
+
+ul li,
+ol li {
+    line-height: 1.2;
+}
+
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    font-size: 13px;
+    padding: 0 15px;
+    color: #707070;
+}
+
+blockquote blockquote {
+    padding-right: 0;
+}
+
+table {
+    font-size: .875rem;
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfdfdf;
+    margin: 0;
+    padding: 0;
+}
+
+thead {
+    background-color: #f8f8f8;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfdfdf;
+    border-bottom: 0;
+    border-bottom: solid 2px #ccc;
+    margin: 0;
+    padding: 10px 16px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 10px 16px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
