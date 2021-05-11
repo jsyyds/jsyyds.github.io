@@ -1,5 +1,5 @@
 ---
 name: web development
-description: Building, designing, maintaining websites and web services.
-img: https://images.unsplash.com/photo-1598313183973-4effcded8d5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80
+description: 构建、设计、维护网站和网络服务。
+img: https://images.unsplash.com/photo-1620607845876-214068622f8c
 ---

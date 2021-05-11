@@ -15,8 +15,8 @@
           <p class="mr-3">
             {{ formatDate(article.updatedAt) }}
           </p>
-          <span class="mr-3">•</span>
-          <p>{{ article.author.name }}</p>
+          <!-- <span class="mr-3">•</span>
+          <p>{{ article.author.name }}</p> -->
         </div>
         <h1 class="text-6xl font-bold">{{ article.title }}</h1>
         <span v-for="(tag, id) in article.tags" :key="id">
@@ -34,14 +34,8 @@
           to="/"
           class="mr-8 self-center text-white font-bold hover:underline"
         >
-          All articles
+          全部文章
         </NuxtLink>
-        <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-          class="mr-8 self-center text-white font-bold hover:underline"
-        >
-          Tutorial
-        </a>
         <AppSearchInput />
       </div>
     </div>
@@ -61,14 +55,14 @@
               'font-semibold': link.depth === 2
             }"
           >
-            <nuxtLink
-              :to="`#${link.id}`"
+            <a
+              :href="`#${link.id}`"
               class="hover:underline"
               :class="{
                 'py-2': link.depth === 2,
                 'ml-2 pb-2': link.depth === 3
               }"
-              >{{ link.text }}</nuxtLink
+              >{{ link.text }}</a
             >
           </li>
         </ul>
@@ -76,7 +70,7 @@
       <!-- content from markdown -->
       <nuxt-content :document="article" />
       <!-- content author component -->
-      <author :author="article.author" />
+      <!-- <author :author="article.author" /> -->
       <!-- prevNext component -->
       <PrevNext :prev="prev" :next="next" class="mt-8" />
     </div>
@@ -106,7 +100,7 @@ export default {
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
+      return new Date(date).toLocaleDateString('zh', options)
     }
   }
 }
