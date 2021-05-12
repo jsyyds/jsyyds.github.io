@@ -50,7 +50,11 @@
     <footer class="flex justify-center border-gray-500 border-t-2">
       <p class="mt-4">
         © 2021 —— 学海拾贝，
-        <a href="https:github.com/jsyyds" class="font-bold hover:underline"
+        <a
+          class="font-bold hover:underline"
+          href="http://github.com/jsyyds"
+          target="_blank"
+          rel="noopener noreferrer"
           >Lucas Liu</a
         >
         的个人博客
