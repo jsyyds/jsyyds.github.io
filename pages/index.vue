@@ -49,11 +49,11 @@
     </ul>
     <footer class="flex justify-center border-gray-500 border-t-2">
       <p class="mt-4">
-        © 2021 — 由
+        © 2021 —— 学海拾贝，
         <a href="https:github.com/jsyyds" class="font-bold hover:underline"
           >Lucas Liu</a
         >
-        使用 Vue.js + Nuxt 设计和编码的 Web App
+        的个人博客
       </p>
     </footer>
   </div>

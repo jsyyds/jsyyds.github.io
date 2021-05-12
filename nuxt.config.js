@@ -19,7 +19,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Web app designed and coded by Lucas Liu using Vue.js + Nuxt.'
+        content: '学海拾贝，Lucas Liu 的个人博客'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
