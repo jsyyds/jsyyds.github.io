@@ -22,7 +22,10 @@ export default {
         content: '学海拾贝，Lucas Liu 的个人博客'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'dns-prefetch', href: '//images.unsplash.com' }
+    ]
   },
   /*
    ** Global CSS
