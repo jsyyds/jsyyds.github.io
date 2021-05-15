@@ -30,12 +30,12 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/markdown.scss'],
+  css: ['element-ui/lib/theme-chalk/index.css', '@/assets/css/markdown.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: ['@/plugins/element-ui'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -75,7 +75,9 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    transpile: [/^element-ui/]
+  },
 
   generate: {
     dir: 'docs'
