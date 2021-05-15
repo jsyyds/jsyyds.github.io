@@ -31,6 +31,16 @@
         </NuxtLink>
       </li>
     </ul>
+
+    <el-pagination
+      class="text-center mb-4"
+      layout="prev, pager, next"
+      :total="total"
+      :current-page.sync="currentPage"
+      @current-change="currentChange"
+    >
+    </el-pagination>
+
     <h3 class="mb-4 font-bold text-2xl uppercase text-center">主题</h3>
     <ul class="flex flex-wrap mb-4 text-center">
       <li
@@ -66,18 +76,37 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const articles = await $content('articles', params.slug)
+    const allArticles = await $content('articles', params.slug)
       // .only(['title', 'description', 'img', 'slug', 'author'])
       .only(['title', 'description', 'img', 'slug'])
       .sortBy('createdAt', 'desc')
       .fetch()
+    const articles = allArticles.slice(0).splice(0, 10)
     const tags = await $content('tags', params.slug)
       .only(['name', 'description', 'img', 'slug'])
       .sortBy('createdAt', 'asc')
       .fetch()
     return {
+      allArticles,
       articles,
       tags
+    }
+  },
+  data() {
+    return {
+      currentPage: 1
+    }
+  },
+  computed: {
+    total() {
+      return this.allArticles.length
+    }
+  },
+  methods: {
+    currentChange(currentPage) {
+      this.articles = this.allArticles
+        .slice(0)
+        .splice((currentPage - 1) * 10, currentPage * 10)
     }
   }
 }

@@ -72,6 +72,7 @@
       <nuxt-content :document="article" />
       <!-- content author component -->
       <!-- <author :author="article.author" /> -->
+      <el-divider></el-divider>
       <!-- prevNext component -->
       <PrevNext :prev="prev" :next="next" class="mt-8" />
     </div>
