@@ -20,7 +20,7 @@ tags:
 
 ### “人肉” VCS
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_人肉_VCS.jpg" alt="版本管理_人肉_VCS" width="1520" height="234">
+<img src="/img/版本管理_人肉_VCS.jpg" alt="版本管理_人肉_VCS" width="1520" height="234">
 
 不予置评
 
@@ -30,7 +30,7 @@ tags:
 
   - RCS(Revision Control System)
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_LVCS_本地式.jpg" alt="版本管理_LVCS_本地式" width="902" height="767">
+<img src="/img/版本管理_LVCS_本地式.jpg" alt="版本管理_LVCS_本地式" width="902" height="767">
 
 - 好处
 
@@ -50,7 +50,7 @@ tags:
 
   - Perforce
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_CVCS_集中式.jpg" alt="版本管理_CVCS_集中式" width="907" height="720">
+<img src="/img/版本管理_CVCS_集中式.jpg" alt="版本管理_CVCS_集中式" width="907" height="720">
 
 - 好处
 
@@ -70,7 +70,7 @@ tags:
 
   - Mercurial
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_DVCS_分布式.jpg" alt="版本管理_DVCS_分布式" width="754" height="840">
+<img src="/img/版本管理_DVCS_分布式.jpg" alt="版本管理_DVCS_分布式" width="754" height="840">
 
 - 好处
 
@@ -124,11 +124,11 @@ tags:
 
 ### 分支模型 - 特性开发
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_特性开发.jpg" alt="版本管理_特性开发" width="1920" height="1080">
+<img src="/img/版本管理_特性开发.jpg" alt="版本管理_特性开发" width="1920" height="1080">
 
 ### 分支模型 - 发布线
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_发布线.jpg" alt="版本管理_发布线" width="1920" height="1080">
+<img src="/img/版本管理_发布线.jpg" alt="版本管理_发布线" width="1920" height="1080">
 
 ### 环境
 
@@ -264,15 +264,15 @@ man git-\<command\>
 
 - 暂存区 <-> 最新提交
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_status.jpg" alt="版本管理_git_status" width="1805" height="822">
+<img src="/img/版本管理_git_status.jpg" alt="版本管理_git_status" width="1805" height="822">
 
 #### git add
 
 添加文件内容到**暂存区 (同时文件被跟踪)**
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_add.jpg" alt="版本管理_git_add" width="911" height="748">
+<img src="/img/版本管理_git_add.jpg" alt="版本管理_git_add" width="911" height="748">
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_add1.jpg" alt="版本管理_git_add1" width="600" height="683">
+<img src="/img/版本管理_git_add1.jpg" alt="版本管理_git_add1" width="600" height="683">
 
 我们可以通过 `git add .` 来添加当前目录的所有文件。这时可能会出现我们不希望被跟踪的一些配置文件被跟踪，这需要配置我们的忽略文件。
 
@@ -282,7 +282,7 @@ man git-\<command\>
 
   - 仅作用于**未追踪**的文件
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_gitignore.jpg" alt="版本管理_gitignore" width="900" height="600">
+<img src="/img/版本管理_gitignore.jpg" alt="版本管理_gitignore" width="900" height="600">
 
 github 官方 gitignore 模板：https://github.com/github/gitignore
 
@@ -330,14 +330,14 @@ github 官方 gitignore 模板：https://github.com/github/gitignore
 
   `-m` 参数帮助我们对这个提交进行注释，这样我们在进行 log 命令的时候可以得到一个友好的提示。
 
-  <img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_commit.jpg" alt="版本管理_git_commit" width="772" height="328">
+  <img src="/img/版本管理_git_commit.jpg" alt="版本管理_git_commit" width="772" height="328">
 
 
 - git commit -a -m '***'
 
   直接提交到提交区。
 
-  <img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_commit1.jpg" alt="版本管理_git_commit1" width="773" height="279">
+  <img src="/img/版本管理_git_commit1.jpg" alt="版本管理_git_commit1" width="773" height="279">
 
 #### git log
 
@@ -388,7 +388,7 @@ Date: Thu Mar 5 15:40:55 2020 +0800 : 提交时间
 
   - 工作目录与某次提交的差异
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_diff.jpg" alt="版本管理_git_diff" width="843" height="517">
+<img src="/img/版本管理_git_diff.jpg" alt="版本管理_git_diff" width="843" height="517">
 
 #### 撤销本地修改
 
@@ -396,7 +396,7 @@ Date: Thu Mar 5 15:40:55 2020 +0800 : 提交时间
 
   将文件内容从暂存区复制到工作目录 (放弃修改)
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_checkout.jpg" alt="版本管理_git_checkout" width="650" height="349">
+<img src="/img/版本管理_git_checkout.jpg" alt="版本管理_git_checkout" width="650" height="349">
 
 #### 撤销暂存区内容
 
@@ -404,7 +404,7 @@ Date: Thu Mar 5 15:40:55 2020 +0800 : 提交时间
 
   将文件内容从上次提交复制到暂存区 (撤销上次提交)
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_reset.jpg" alt="版本管理_git_reset" width="652" height="340">
+<img src="/img/版本管理_git_reset.jpg" alt="版本管理_git_reset" width="652" height="340">
 
 #### 撤销全部改动
 
@@ -412,11 +412,11 @@ Date: Thu Mar 5 15:40:55 2020 +0800 : 提交时间
 
   将内容从上次提交复制到工作目录
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_checkout1.jpg" alt="版本管理_git_checkout1" width="689" height="334">
+<img src="/img/版本管理_git_checkout1.jpg" alt="版本管理_git_checkout1" width="689" height="334">
 
 #### 基本操作总结
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_基本操作总结.jpg" alt="版本管理_基本操作总结" width="1920" height="1080">
+<img src="/img/版本管理_基本操作总结.jpg" alt="版本管理_基本操作总结" width="1920" height="1080">
 
 
 ### 分支操作
@@ -485,7 +485,7 @@ Date: Thu Mar 5 15:40:55 2020 +0800 : 提交时间
 
 - A~n : 在 A 之前的第 n 次提交
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_使用捷径.jpg" alt="版本管理_使用捷径" width="1048" height="659">
+<img src="/img/版本管理_使用捷径.jpg" alt="版本管理_使用捷径" width="1048" height="659">
 
 \<!-- /在这里结束插入 -->
 
@@ -522,7 +522,7 @@ git checkout \<file\>|git checkout -- README.md<br>git checkout HEAD -- xx.log|�
 
   stash apply + stash drop
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_stash.jpg" alt="版本管理_git_stash" width="879" height="696">
+<img src="/img/版本管理_git_stash.jpg" alt="版本管理_git_stash" width="879" height="696">
 
 #### git merge
 
@@ -536,53 +536,53 @@ git checkout \<file\>|git checkout -- README.md<br>git checkout HEAD -- xx.log|�
 
 \<!-- /在这儿结束插入 -->
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_merge.jpg" alt="版本管理_git_merge" width="1171" height="670">
+<img src="/img/版本管理_git_merge.jpg" alt="版本管理_git_merge" width="1171" height="670">
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_merge1.jpg" alt="版本管理_git_merge1" width="1126" height="468">
+<img src="/img/版本管理_git_merge1.jpg" alt="版本管理_git_merge1" width="1126" height="468">
 
 #### merge fast-forward
 
 快速向前合并
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_merge2.jpg" alt="版本管理_git_merge2" width="1021" height="437">
+<img src="/img/版本管理_git_merge2.jpg" alt="版本管理_git_merge2" width="1021" height="437">
 
 `$ git merge next --no-ff`
 
 不使用 fast-forward 方式合并
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_merge3.jpg" alt="版本管理_git_merge1" width="1107" height="548">
+<img src="/img/版本管理_git_merge3.jpg" alt="版本管理_git_merge1" width="1107" height="548">
 
 #### merge 的不足
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_merge4.jpg" alt="版本管理_git_merge4" width="1519" height="820">
+<img src="/img/版本管理_git_merge4.jpg" alt="版本管理_git_merge4" width="1519" height="820">
 
 #### git rebase
 
 修剪提交历史基线，俗称“变基”
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_rebase.jpg" alt="版本管理_git_rebase" width="1118" height="456">
+<img src="/img/版本管理_git_rebase.jpg" alt="版本管理_git_rebase" width="1118" height="456">
 
 `$ git rebase master`
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_rebase1.jpg" alt="版本管理_git_rebase1" width="1587" height="580">
+<img src="/img/版本管理_git_rebase1.jpg" alt="版本管理_git_rebase1" width="1587" height="580">
 
 #### git rebase --onto
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_rebase2.jpg" alt="版本管理_git_rebase2" width="1121" height="422">
+<img src="/img/版本管理_git_rebase2.jpg" alt="版本管理_git_rebase2" width="1121" height="422">
 
 `$ git rebase --onto master 5751363`
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_rebase3.jpg" alt="版本管理_git_rebase3" width="1581" height="597">
+<img src="/img/版本管理_git_rebase3.jpg" alt="版本管理_git_rebase3" width="1581" height="597">
 
 #### rebase vs merge
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_rebase_vs_git_merge.jpg" alt="版本管理_git_rebase_vs_git_merge" width="1920" height="1080">
+<img src="/img/版本管理_git_rebase_vs_git_merge.jpg" alt="版本管理_git_rebase_vs_git_merge" width="1920" height="1080">
 
 #### 勿在共有分支使用 rebase
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_rebase4.jpg" alt="版本管理_git_rebase4" width="1397" height="387">
+<img src="/img/版本管理_git_rebase4.jpg" alt="版本管理_git_rebase4" width="1397" height="387">
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_rebase5.jpg" alt="版本管理_git_rebase5" width="1484" height="419">
+<img src="/img/版本管理_git_rebase5.jpg" alt="版本管理_git_rebase5" width="1484" height="419">
 
 #### git tag
 
@@ -590,7 +590,7 @@ git checkout \<file\>|git checkout -- README.md<br>git checkout HEAD -- xx.log|�
 
 `$ git tag v0.1 e39d0b2`
 
-<img src="https://gitee.com/lucasliu3516/images/raw/master/images/版本管理_git_tag.jpg" alt="版本管理_git_tag" width="1116" height="451">
+<img src="/img/版本管理_git_tag.jpg" alt="版本管理_git_tag" width="1116" height="451">
 
 `$ git checkout v0.1`
 
