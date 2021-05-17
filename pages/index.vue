@@ -81,7 +81,7 @@ export default {
       .only(['title', 'description', 'img', 'slug'])
       .sortBy('createdAt', 'desc')
       .fetch()
-    const articles = allArticles.slice(0).splice(0, 10)
+    const articles = allArticles.slice(0, 10)
     const tags = await $content('tags', params.slug)
       .only(['name', 'description', 'img', 'slug'])
       .sortBy('createdAt', 'asc')
@@ -104,9 +104,10 @@ export default {
   },
   methods: {
     currentChange(currentPage) {
-      this.articles = this.allArticles
-        .slice(0)
-        .splice((currentPage - 1) * 10, currentPage * 10)
+      this.articles = this.allArticles.slice(
+        (currentPage - 1) * 10,
+        currentPage * 10
+      )
     }
   }
 }
