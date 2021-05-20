@@ -61,13 +61,13 @@ console.log('I do like %c%s', 'padding: 2px 4px;background: orange;color: white;
 
 其中，CSS 样式占位符效果如下：
 
-![CSS-样式占位符](../img/CSS_样式占位符.png)
+![CSS-样式占位符](/img/CSS_样式占位符.png)
 
 ## 2. console.warn()
 
 你可以完全使用 console.warn 来代替 console.log 方法，但前提是该条打印信息是属于警告级别而不是普通信息级别，因此浏览器遇到一条警告级别的信息会区别对待，最明显的是它的左侧会有一个警告图标，并且背景色和文字颜色也会不一样。
 
-![警告信息](../img/警告信息.png)
+![警告信息](/img/警告信息.png)
 
 相比于普通信息，警告信息会出现在上图左侧的warning面板中，而不是info面板中，这样也有助于我们在一堆打印信息中快速筛选出警告信息，方便查看。
 
@@ -75,17 +75,17 @@ console.log('I do like %c%s', 'padding: 2px 4px;background: orange;color: white;
 
 在大多数情况下，console.dir方法的作用和console.log作用相似，但是有一点细微的差别。
 
-![log_dir](../img/log_dir.png)
+![log_dir](/img/log_dir.png)
 
 在上图中，我们可以看到，console.log方法会将打印结果的详细信息显示完整，但是console.dir方法只会打印出对象，不会展开详细信息，当然点击之后看到的信息和前者一样。
 
 唯一差异比较大的地方是当我们打印HTML文档中的节点时，会有完全不一样的表现形式。例如我们使用console.log来打印body标签：
 
-![log_打印_body](../img/log_打印_body.png)
+![log_打印_body](/img/log_打印_body.png)
 
 我们会方便地看到DOM结构，并且鼠标移上去能够帮我们自动定位到对应的DOM节点。但是在某些情况下，其实这并不是你想要看到的效果，或许你想看到的是该DOM节点下的所有属性信息，那么你可以尝试使用console.dir方法来试试：
 
-![dir_打印_body](../img/dir_打印_body.png)
+![dir_打印_body](/img/dir_打印_body.png)
 
 ## 4. console.table()
 
@@ -110,15 +110,15 @@ const response = [
 
 然后我们使用console.log来进行打印：
 
-![log_打印对象数组](../img/log_打印对象数组.png)
+![log_打印对象数组](/img/log_打印对象数组.png)
 
 可以看出，我们打印出的结果并不够直接，没有给人一种一目了然的效果，接着换着使用console.table来打印：
 
-![table_打印对象数组](../img/table_打印对象数组.png)
+![table_打印对象数组](/img/table_打印对象数组.png)
 
 可以看到，我们的列表数据被清晰完整地展现在了表格当中，同时console.table提供第二个可选参数用于筛选表格需要显示的列，默认为全部列都显示。
 
-![table_打印对象数组_可选参数](../img/table_打印对象数组_可选参数.png)
+![table_打印对象数组_可选参数](/img/table_打印对象数组_可选参数.png)
 
 上图我们通过添加第二个参数，数组中为需要在表格中显示的字段名，这样就很方便地在结果数据中过滤掉我们不需要关心的信息。
 
@@ -126,7 +126,7 @@ const response = [
 
 assert 即断言，该方法接收多个参数，其中第一个参数为输入的表达式，只有在该表达式的值为 false 时，才会将剩余的参数输出到控制台中。
 
-![assert](../img/assert.png)
+![assert](/img/assert.png)
 
 上图中的第二行因为 arr.length < 5 值为 false，因此打印出后面的信息。如果在某些场景下你需要评估当前的数据是否满足某个条件，那么不妨使用 console.assert() 方法来在控制台中查看断言信息。
 
@@ -157,7 +157,7 @@ bar2(null) // []
 
 在上面代码中，我们分别在 bar1 和 bar2 函数中调用 foo 函数并传入不同的参数，很显然 bar2 函数在执行时会进入 if 语句并执行 console.trace() 方法，以下是控制台中打印结果：
 
-![trace](../img/trace.png)
+![trace](/img/trace.png)
 
 可以看到自下而上的一条调用路径，并可以快速判定是在bar2函数中传入了不合适的参数null而导致出错，方便我们跟踪发生错误的原始位置。
 
@@ -215,7 +215,7 @@ console.timeEnd('sum')
 
 控制台效果如下：
 
-![time](../img/time.png)
+![time](/img/time.png)
 
 相比于第一种实现方式，我们没有设置任何临时变量并且没有做任何计算。
 
@@ -243,7 +243,7 @@ const myClass = new MyClass()
 
 控制台效果如下：
 
-![group](../img/group.png)
+![group](/img/group.png)
 
 该方法的作用主要是让我们在控制台打印的日志更加清晰可读。
 
@@ -257,7 +257,7 @@ document.body.contentEditable = true;
 
 在控制台中输入以上代码后，可以将浏览器中的所有内容变为可编辑状态，效果图如下：
 
-![浏览器转编辑器](../img/浏览器转编辑器.gif)
+![浏览器转编辑器](/img/浏览器转编辑器.gif)
 
 ## 11. Chrome Command Line API
 
@@ -295,7 +295,7 @@ $_ // -> 10
 
 getEventListeners($('selector')) 返回在指定DOM元素上注册的事件监听器。返回值是一个对象，对象的 key 为对应的事件类型（例如 click，focus），对象的 value 为一个数组，其包含了对应事件类型下的所有事件监听器。例如，下面列出了在 document 上注册的所有事件监听器：
 
-![getEventListeners](../img/getEventListeners.png)
+![getEventListeners](/img/getEventListeners.png)
 
 如果我们需要找到某个特定的事件监听器，可以通过如下方式进行访问：
 
@@ -319,7 +319,7 @@ getEventListeners(document).click[0].listener
 
 效果图如下：
 
-![monitorEvents](../img/monitorEvents.gif)
+![monitorEvents](/img/monitorEvents.gif)
 
 ### 11.5 检查 DOM 元素
 
@@ -329,4 +329,4 @@ getEventListeners(document).click[0].listener
 
 效果图如下：
 
-![inspect](../img/inspect.gif)
+![inspect](/img/inspect.gif)
