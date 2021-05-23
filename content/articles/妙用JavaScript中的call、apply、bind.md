@@ -1,7 +1,7 @@
 ---
 title: 妙用 JavaScript 中的 call、apply、bind
 description: 妙、妙、妙啊！
-img: https://images.unsplash.com/photo-1617472600356-d6cc97119a0b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIzfHxqYXZhc2NyaXB0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80
+img: https://images.unsplash.com/photo-1621610070598-942dd697cc7c?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4NHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80
 alt: 妙用 JavaScript 中的 call、apply、bind
 tags:
   - javascript
