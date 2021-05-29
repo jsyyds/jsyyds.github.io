@@ -1,1 +1,0 @@
-window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1622215161",layout:"default",error:null,serverRendered:true,routePath:"\u002Fblog\u002Fasync-await-%E7%9A%84%E5%90%AB%E4%B9%89%E5%92%8C%E7%94%A8%E6%B3%95",config:{content:{dbHash:"97e63747"}}};
