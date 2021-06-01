@@ -1,1 +1,0 @@
-window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1622388288",layout:"default",error:null,serverRendered:true,routePath:"\u002Fblog\u002F%E7%BC%96%E5%86%99Dom%E7%9A%84%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Emmet_%E8%AF%AD%E6%B3%95%E9%80%9F%E6%9F%A5",config:{content:{dbHash:"a1fcc585"}}};
