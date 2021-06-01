@@ -137,3 +137,135 @@ function convert(obj) {
   })
 }
 ```
+
+### 依赖跟踪(发布订阅模式)
+
+需要实现一个依赖跟踪类 `Dep`，类里有一个叫 `depend` 方法，该方法用于收集依赖项；另外还有一个 `notify` 方法，该方法用于触发依赖项的执行，也就是说只要在之前使用 `depend` 方法手机的依赖项，当调用 `notify` 方法时会被触发执行。
+
+下面是 `Dep` 类期望达到的效果，调用 `dep.depend` 方法收集依赖，当调用 `dep.notify` 方法，控制台会再次输出 `update` 语句。
+
+```js
+const dep = new Dep()
+
+autorun(() => {
+  dep.depend()
+  console.log('updated')
+})
+// 打印："updated"
+
+dep.notify()
+// 打印："updated"
+```
+
+`autorun` 函数接收一个函数，这个函数帮助我们创建一个相应区，当代码放在这个相应区内，就可以通过 `dep.depend` 方法注册依赖项
+
+最终实现的 `Dep` 类代码如下：
+
+```js
+window.Dep = class Dep {
+  constructor() {
+    // 订阅任务队列，方式有相同的任务，用 Set 数据结构简单处理
+    this.subscribers = new Set()
+  }
+
+  depend() {
+    if (activeUpdate) {
+      this.subscribers.add(activeUpdate)
+    }
+  }
+
+  // 用于发布消息，触发依赖项重新执行
+  notify() {
+    this.subscribers.forEach(sub => sub())
+  }
+}
+
+let activeUpdate = null
+
+function autorun(update) {
+  const wrappedUpdate = () => {
+    activeUpdate = wrappedUpdate
+    update()
+    activeUpdate = null
+  }
+  wrappedUpdate()
+}
+```
+
+### 实现迷你观察者
+
+我们将前面的代码整合到一起，实现一个小型的观察者，通过在 getter 和 setter 中调用 `depend` 方法和 `notify` 方法，就可以实现自动更新数据的目的了，这也是 Vue 实现自动更新的核心原理。
+
+期望实现的调用效果：
+
+```js
+const state = {
+  count: 0
+}
+
+observe(state)
+
+autorun(() => {
+  console.log(`count is: ${state.count}`)
+})
+// 打印 "count is: 0"
+
+state.count++
+// 打印 "count is: 1"
+```
+
+最终整合代码如下：
+
+```js
+class Dep {
+  constructor() {
+    this.subscribers = new Set()
+  }
+
+  depend() {
+    if (activeUpdate) {
+      this.subscribers.add(activeUpdate)
+    }
+  }
+
+  notify() {
+    this.subscribers.forEach(sub => sub())
+  }
+}
+
+function observe(obj) {
+  Object.keys(obj).forEach(key => {
+    let internalValue = obj[key]
+
+    const dep = new Dep()
+    Object.defineProperty(obj, key, {
+      // 在 getter 收集依赖项，当触发 notify 时重新运行
+      get() {
+        dep.depend()
+        return internalValue
+      },
+
+      // setter 用于调用 notify
+      set(newVal) {
+        const changed = internalValue !== newVal
+        internalValue = newVal
+        if (changed) {
+          dep.notify()
+        }
+      }
+    })
+  })
+  return obj
+}
+
+let activeUpdate = null
+
+function autorun(update) {
+  const wrappedUpdate = () => {
+    activeUpdate = wrappedUpdate
+    update()
+    activeUpdate = null
+  }
+  wrappedUpdate()
+}
+```
