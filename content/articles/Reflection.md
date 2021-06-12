@@ -155,7 +155,7 @@ if(Reflect.has(obj, 'id')){
 }
 ```
 
-### Reflect 的方法
+## Reflect 的方法
 
 Reflect 提供 13 个静态方法：
 
@@ -173,7 +173,7 @@ Reflect 提供 13 个静态方法：
 * Reflect.set()
 * Reflect.setPrototypeOf()
 
-## Reflect.apply()
+### Reflect.apply()
 
 对一个函数进行调用操作，同时可以传入一个数组作为调用参数。
 
@@ -214,7 +214,7 @@ Reflect.constructor(Date, [2018, 4, 1])
 
 我们会得到一个日期，该日期是 2018年4月1号。
 
-## Reflect.defineProperty()
+### Reflect.defineProperty()
 
 定义对象的一个属性。
 
@@ -239,7 +239,7 @@ console.log(student.name)
 小明
 ```
 
-## Reflect.deleteProperty()
+### Reflect.deleteProperty()
 
 删除一个对象的一个属性。
 
@@ -262,7 +262,7 @@ console.log(student.name)
 undefined
 ```
 
-## Reflect.get()
+### Reflect.get()
 
 查找并返回对象的属性值。
 
